@@ -1,13 +1,11 @@
-function maxProfit(prices: number[]): number {
-  let profit = 0;
-
-  for (let day = 0; day < prices.length - 1; day++) {
-    if (prices[day] < prices[day + 1]) {
-      profit += prices[day + 1] - prices[day];
-    }
+/**
+ Do not return anything, modify nums in-place instead.
+ */
+function rotate(nums: number[], k: number): void {
+  for (let i = 0; i < k; i++) {
+    nums.unshift(nums.pop() || nums.length);
   }
-
-  return profit;
+  console.log(nums);
 }
 
-console.log(maxProfit([1, 2, 3, 4, 5]));
+rotate([1, 2, 3, 4, 5, 6, 7], 3);
