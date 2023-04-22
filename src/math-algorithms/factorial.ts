@@ -7,7 +7,3 @@ function factorial(num: number): number {
 }
 
 console.log(factorial(3));
-
-// Big-O
-// time-complexcity = linear
-// space-complexcity = constant
